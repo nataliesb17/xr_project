@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Pool
 {
-   public static List<T> Create<T>(GameObject prefab, int count)
+   public List<T> Create<T>(GameObject prefab, int count)
         where T : MonoBehaviour
     {
         //New List
@@ -30,14 +30,14 @@ public class ProjectilePool : Pool
 
     public ProjectilePool(GameObject prefab, int count)
     {
-        m_Projectiles = ProjectilePool.Create<Projectile>(prefab, count);
+        m_Projectiles = Create<Projectile>(prefab, count);
     }
 
-    public void SetAllProjectiles(bool value)
+    public void SetAllProjectiles()
     {
         foreach(Projectile projectile in m_Projectiles)
         {
-
+            projectile.SetInnactive();
         }
     }
 }
