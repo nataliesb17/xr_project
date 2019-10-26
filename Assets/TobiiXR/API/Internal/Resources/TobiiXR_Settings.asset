@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 198ed005030e25047bd6bf1a66b39d3f, type: 3}
   m_Name: TobiiXR_Settings
   m_EditorClassIdentifier: 
-  EyeTrackingFilterType: 
-  FieldOfUse: 0
-  EyeTrackingProviderTypeStandAlone: Tobii.XR.TobiiProvider
+  EyeTrackingFilterType: Tobii.XR.GazeModifier.GazeModifierFilter, TobiiXRDevTools,
+    Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  FieldOfUse: 2
+  EyeTrackingProviderTypeStandAlone: TobiiHTCProvider
   EyeTrackingProviderTypeAndroid: Tobii.XR.NoseDirectionProvider
   LayerMask:
     serializedVersion: 2
