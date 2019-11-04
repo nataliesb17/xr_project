@@ -13,10 +13,10 @@ public class HighlightAtGaze : MonoBehaviour, IGazeFocusable
     private Color _originalColor;
     private Color _targetColor;
 
-    public bool focused;
-    public float timer;
+    //public bool focused;
+    //public float timer;
 
-    public GameObject cube;
+    //public GameObject cube;
 
     //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
     public void GazeFocusChanged(bool hasFocus)
@@ -24,13 +24,13 @@ public class HighlightAtGaze : MonoBehaviour, IGazeFocusable
         //If this object received focus, fade the object's color to highlight color
         if(hasFocus) 
         {
-            focused = true;
+            //focused = true;
             _targetColor = HighlightColor;
         }
         //If this object lost focus, fade the object's color to it's original color
         else
         {
-            focused = false;
+          //  focused = false;
             _targetColor = _originalColor;
         }
     }
@@ -40,8 +40,8 @@ public class HighlightAtGaze : MonoBehaviour, IGazeFocusable
         _renderer = GetComponent<Renderer>();
         _originalColor = _renderer.material.color;
         _targetColor = _originalColor;
-        focused = true;
-        timer = 2.0f;
+       // focused = true;
+       // timer = 2.0f;
 
 
     }
@@ -51,18 +51,18 @@ public class HighlightAtGaze : MonoBehaviour, IGazeFocusable
         //This lerp will fade the color of the object
         _renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / AnimationTime));
 
-        while (focused == true)
-        {
-            timer -= Time.deltaTime;
-            if (timer <= 0)
-            {
-                cube.SetActive(false);
-            }
-        }
-        while (focused == false)
-        {
-            timer = 2.0f;
-        }
+       // while (focused == true)
+      //  {
+       //     timer -= Time.deltaTime;
+       //     if (timer <= 0)
+       //     {
+        //        cube.SetActive(false);
+       //     }
+      //  }
+      //  while (focused == false)
+      //  {
+      //      timer = 2.0f;
+      //  }
     }
 
 
