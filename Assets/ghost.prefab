@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 918088367017880874}
   - component: {fileID: 918088367017880873}
   - component: {fileID: 918088367017880872}
-  - component: {fileID: 918088367017880875}
   m_Layer: 0
   m_Name: ghost
   m_TagString: Untagged
@@ -70,20 +69,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 918088367017880873}
   player: {fileID: 146900, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
---- !u!114 &918088367017880875
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 918088367017880871}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a56e55c186477c9469acb717d5dff1dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  enemy: {fileID: 146900, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
 --- !u!65 &918088366256022513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -111,6 +96,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighlightColor: {r: 1, g: 0, b: 0, a: 1}
   AnimationTime: 0.1
+--- !u!114 &4351716757420646190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9195323045779965593}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e94bcae89037d824cb0c5e6616db459a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ghostPrefab: {fileID: 918088367017880871}
 --- !u!1001 &918088366080319376
 PrefabInstance:
   m_ObjectHideFlags: 0

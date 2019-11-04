@@ -1,0 +1,40 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using Tobii.G2OM;
+
+public class ghostDeleter : MonoBehaviour
+
+{
+
+    float timer = 2.0f;
+    public GameObject ghostPrefab;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+   public void GazeFocusChanged(bool hasFocus)
+    {
+        if (hasFocus)
+        {
+            timer -= Time.deltaTime;
+            if (timer <= 0.0f)
+            {
+                GameObject.Destroy(ghostPrefab);
+            }
+        }
+        else
+        {
+            timer = 2.0f;
+        }
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+}

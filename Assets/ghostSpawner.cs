@@ -7,25 +7,32 @@ public class ghostSpawner : MonoBehaviour
 {
     public GameObject ghostPrefab;
     public GameObject positionBoy;
-    //int num = 0;
     float timer = 3.0f;
+    public int num;
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        //while (num <= 2)
-        //{
 
-        //}
     }
 
     void Update()
     {
+        
         timer -= Time.deltaTime;
         if (timer <= 0.0f)
         {
-            Instantiate(ghostPrefab, positionBoy.transform.position, Quaternion.identity);
-            timer = 3.0f;
+            num = UnityEngine.Random.Range(0, 5);
+            if (num == 0)
+            {
+                Instantiate(ghostPrefab, positionBoy.transform.position, Quaternion.identity);
+            }
+            else
+            {
+                num = UnityEngine.Random.Range(0, 2);
+                timer = 3.0f;
+            }
         }
 
     }
