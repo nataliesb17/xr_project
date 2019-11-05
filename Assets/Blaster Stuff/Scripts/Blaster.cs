@@ -12,7 +12,7 @@ public class Blaster : MonoBehaviour
     public SteamVR_Action_Boolean m_ReloadAction = null;
 
     [Header("Settings")]
-    public int m_Force = 10;
+    public int m_Force = 10; //change this number for shooting straight 100
     public int m_MaxProjectileCount = 6;
     public float m_ReloadTime = 1.5f;
 
