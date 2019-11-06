@@ -19,7 +19,7 @@ public class ghostSpawner : MonoBehaviour
 
     }
 
-    void Update()
+    void FixedUpdate()
     {
         
         timer -= Time.deltaTime;
@@ -41,8 +41,9 @@ public class ghostSpawner : MonoBehaviour
             else
             {
                 num = UnityEngine.Random.Range(0, 2);
-                timer = 3.0f;
+                spawnNum = UnityEngine.Random.Range(0, 2);
             }
+            timer = 3.0f;
         }
 
     }
