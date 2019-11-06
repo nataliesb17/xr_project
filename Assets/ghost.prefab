@@ -68,7 +68,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 918088367017880873}
-  player: {fileID: 146900, guid: 4d293c8e162f3874b982baadd71153d2, type: 3}
+  player: {fileID: 7310682660691012539, guid: c4c5e0c1d84587a43baceed94cdefa7a, type: 3}
 --- !u!65 &918088366256022513
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -96,6 +96,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HighlightColor: {r: 1, g: 0, b: 0, a: 1}
   AnimationTime: 0.1
+  ghostPrefab: {fileID: 918088367017880871}
 --- !u!114 &4351716757420646190
 MonoBehaviour:
   m_ObjectHideFlags: 0

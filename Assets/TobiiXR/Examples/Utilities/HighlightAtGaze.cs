@@ -13,18 +13,25 @@ public class HighlightAtGaze : MonoBehaviour, IGazeFocusable
     private Color _originalColor;
     private Color _targetColor;
 
+    public GameObject ghostPrefab;
+    public float fl = 2.0f;
+    public bool isFocused;
+
     //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
     public void GazeFocusChanged(bool hasFocus)
     {
         //If this object received focus, fade the object's color to highlight color
         if (hasFocus)
         {
+            isFocused = true;
             _targetColor = HighlightColor;
+           
         }
         //If this object lost focus, fade the object's color to it's original color
         else
         {
             _targetColor = _originalColor;
+            isFocused = false;
         }
     }
 
@@ -39,5 +46,18 @@ public class HighlightAtGaze : MonoBehaviour, IGazeFocusable
     {
         //This lerp will fade the color of the object
         _renderer.material.color = Color.Lerp(_renderer.material.color, _targetColor, Time.deltaTime * (1 / AnimationTime));
+
+        if (isFocused == true)
+        {
+            fl -= Time.deltaTime;
+            if (fl <= 0.0f)
+            {
+                Destroy(ghostPrefab);
+            }
+        }
+        if (isFocused == false)
+        {
+           
+        }
     }
 }
