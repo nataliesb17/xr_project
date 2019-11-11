@@ -19,13 +19,4 @@ public class ghoulMovement : MonoBehaviour
     {
         transform.LookAt(player.transform);
     }
-
-    //private void OnTriggerEnter(Collider other)
-    //{
-    //    if (other.tag == "Player")
-    //    {
-    //        Debug.Log("collision detected");
-    //        GameObject.Destroy(this);
-    //    }
-    //}
 }

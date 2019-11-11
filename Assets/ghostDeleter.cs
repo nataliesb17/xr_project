@@ -9,6 +9,7 @@ public class ghostDeleter : MonoBehaviour
 
     float timer = 2.0f;
     public GameObject ghostPrefab;
+    public int ghostsHit;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +25,7 @@ public class ghostDeleter : MonoBehaviour
             if (timer <= 0.0f)
             {
                 GameObject.Destroy(ghostPrefab);
+                ghostsHit += 1;
             }
         }
         else

@@ -1585,6 +1585,7 @@ GameObject:
   - component: {fileID: 188955709365745432}
   - component: {fileID: 188955709365745414}
   - component: {fileID: 188955709365745415}
+  - component: {fileID: 4046536089797872721}
   m_Layer: 0
   m_Name: ghoulWalkCycle
   m_TagString: Enemy
@@ -1695,6 +1696,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 188955709365745414}
   player: {fileID: 7310682660691012539, guid: c4c5e0c1d84587a43baceed94cdefa7a, type: 3}
+--- !u!114 &4046536089797872721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8196167734526513328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a56e55c186477c9469acb717d5dff1dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  enemy: {fileID: 8196167734526513328}
+  ghoulsHit: 0
 --- !u!1 &8296949452276183605
 GameObject:
   m_ObjectHideFlags: 0
