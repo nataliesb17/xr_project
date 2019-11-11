@@ -9,6 +9,7 @@ TagManager:
   - Interactable
   - Projectile
   - Enemy
+  - despawn
   layers:
   - Default
   - TransparentFX
