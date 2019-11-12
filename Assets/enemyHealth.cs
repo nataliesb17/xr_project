@@ -7,14 +7,24 @@ public class enemyHealth : MonoBehaviour
 
     public int health = 10;
     public GameObject enemy;
-    public int ghoulsHit;
+
+    private GameObject p;
+    private timerGame s;
+
+    private void Start()
+    { 
+    
+        p = GameObject.Find("logging");
+        s = p.GetComponent<timerGame>();
+
+    }
 
     // Start is called before the first frame update
     void Update()
     {
         if(health <= 0)
         {
-            ghoulsHit += 1;
+            s.GhoulHit();
             GameObject.Destroy(enemy);
         }
     }

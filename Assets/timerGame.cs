@@ -18,9 +18,9 @@ public class timerGame : MonoBehaviour {
     // Update is called once per frame
     public void Update()
     {
-        //GameObject p1 = GameObject.Find("seabearTrap");
-        //destroyOnTouch s1 = p1.GetComponent<destroyOnTouch>();
-        //playerHit = s1.playerDamage;
+        GameObject p1 = GameObject.Find("seabearTrap");
+        destroyOnTouch s1 = p1.GetComponent<destroyOnTouch>();
+        playerHit = s1.playerDamage;
 
         ////GameObject p2 = GameObject.Find("g7");
         ////HighlightAtGaze s2 = p2.GetComponent<HighlightAtGaze>();
@@ -43,5 +43,11 @@ public class timerGame : MonoBehaviour {
     {
         ghostsHit++;
         Debug.Log(ghostsHit);
+    }
+
+    public void GhoulHit()
+    {
+        ghoulsHit++;
+        Debug.Log(ghoulsHit);
     }
 }
