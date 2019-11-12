@@ -97,19 +97,9 @@ MonoBehaviour:
   HighlightColor: {r: 1, g: 0, b: 0, a: 1}
   AnimationTime: 0.1
   ghostPrefab: {fileID: 918088367017880871}
---- !u!114 &4351716757420646190
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9195323045779965593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e94bcae89037d824cb0c5e6616db459a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ghostPrefab: {fileID: 918088367017880871}
+  fl: 2
+  isFocused: 0
+  myObject: {fileID: 280190712072963185, guid: 0a7055fe48d532c40a79204084e3554d, type: 3}
 --- !u!1001 &918088366080319376
 PrefabInstance:
   m_ObjectHideFlags: 0

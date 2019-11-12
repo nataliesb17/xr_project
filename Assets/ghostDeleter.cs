@@ -14,7 +14,9 @@ public class ghostDeleter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        GameObject p = GameObject.Find("logging");
+        timerGame s = p.GetComponent<timerGame>();
+        ghostsHit = s.ghostsHit;
     }
 
    public void GazeFocusChanged(bool hasFocus)

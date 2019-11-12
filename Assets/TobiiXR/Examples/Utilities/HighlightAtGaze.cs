@@ -12,10 +12,15 @@ public class HighlightAtGaze : MonoBehaviour, IGazeFocusable
     private Renderer _renderer;
     private Color _originalColor;
     private Color _targetColor;
-
+    private GameObject p;
+    private timerGame s;
     public GameObject ghostPrefab;
     public float fl = 2.0f;
     public bool isFocused;
+
+    public GameObject myObject;
+
+    public bool hasHit;
 
     //The method of the "IGazeFocusable" interface, which will be called when this object receives or loses focus
     public void GazeFocusChanged(bool hasFocus)
@@ -40,6 +45,10 @@ public class HighlightAtGaze : MonoBehaviour, IGazeFocusable
         _renderer = GetComponent<Renderer>();
         _originalColor = _renderer.material.color;
         _targetColor = _originalColor;
+
+        p = GameObject.Find("logging");
+        s = p.GetComponent<timerGame>();
+       
     }
 
     private void Update()
@@ -52,12 +61,13 @@ public class HighlightAtGaze : MonoBehaviour, IGazeFocusable
             fl -= Time.deltaTime;
             if (fl <= 0.0f)
             {
+                s.GhostHit();
                 Destroy(ghostPrefab);
             }
         }
         if (isFocused == false)
         {
-           
+        
         }
     }
 }

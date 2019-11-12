@@ -14,8 +14,8 @@ public class enemyHealth : MonoBehaviour
     {
         if(health <= 0)
         {
-            GameObject.Destroy(enemy);
             ghoulsHit += 1;
+            GameObject.Destroy(enemy);
         }
     }
 
