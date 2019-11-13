@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class sceneSwitch : MonoBehaviour
 {
 
-    float timer = 15.0f;
+    float timer = 60.0f;
 
     // Start is called before the first frame update
     void Start()
